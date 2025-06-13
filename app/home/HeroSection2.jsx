@@ -19,10 +19,16 @@ import {
   FaHome,
 } from "react-icons/fa";
 
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import NeighborHoodsPCard from "../components/Cards/NeighborHoodsPCard";
 4;
+// import { ArrowLeft, ArrowRight } from "lucide-react";
 
+// Animation Variants
+const fadeInUp = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+};
 import { ArrowLeft, ArrowRight } from "lucide-react";
 function HeroSection2() {
   const featuredProperties = [
@@ -621,7 +627,7 @@ function HeroSection2() {
 
         {/* Cards */}
         <motion.div
-          className="flex overflow-hidden gap-6 p-2 scrollbar-thin scrollbar-thumb-gray-400" 
+          className="flex overflow-hidden gap-6 p-2 scrollbar-thin scrollbar-thumb-gray-400"
           // scrollbar-thin scrollbar-thumb-gray-400
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -640,36 +646,65 @@ function HeroSection2() {
       </motion.div>
 
       {/* Our Property Types Container */}
-      <div className="flex flex-col gap-3 justify-center items-center w-[80%]">
-        <div className="flex justify-between items-center w-[100%] flex-wrap">
-          <div>
-            <h1 className="text-xl md:text-3xl font-bold font-mono">
-              Properties Types.
-            </h1>
-          </div>
-          <div className="flex justify-center items-center gap-3">
-            <button className="px-6 py-1 cursor-pointer border-1 border-black">
-              Left
-            </button>
-            <button className="px-6 py-1 cursor-pointer border-1 border-black">
-              Right
-            </button>
-          </div>
-        </div>
+      <motion.div
+        className="flex flex-col gap-8 justify-center items-center w-full max-w-6xl mx-auto px-4 py-8"
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
+        {/* Header */}
+        <motion.div
+          variants={fadeInUp}
+          initial="initial"
+          whileInView="animate"
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="flex flex-col justify-center items-center text-center gap-4 w-full max-w-3xl mx-auto"
+        >
+          <motion.h1
+            className="text-3xl md:text-4xl font-extrabold text-gray-800 leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Discover Property Types for Every Lifestyle
+          </motion.h1>
 
-        <div className="w-[100%] flex flex-col md:flex-row">
+          <motion.p
+            className="text-gray-600 text-sm md:text-base leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
+            From cozy homes to luxury apartments, we offer a wide range of
+            property types to suit your needs. Whether you're looking for urban
+            convenience or peaceful suburban life, explore the perfect place to
+            call home.
+          </motion.p>
+        </motion.div>
+
+        {/* Cards */}
+        <motion.div
+          className="w-full flex flex-col md:flex-row flex-wrap justify-center gap-6"
+          variants={fadeInUp}
+          transition={{ delay: 0.3, duration: 0.5 }}
+        >
           {ourPropertiesTypes.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="flex cursor-pointer flex-col items-center gap-2 p-4 shadow-md rounded-md"
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="flex flex-col items-center gap-3 p-6 bg-white shadow-lg rounded-2xl w-full max-w-[280px] text-center hover:shadow-xl transition-all duration-300"
             >
-              {item.icon}
-              <h3 className="text-lg font-semibold">{item.title}</h3>
-              <p className="text-sm text-gray-600 text-center">{item.para}</p>
-            </div>
+              <div className="text-blue-500 text-4xl">{item.icon}</div>
+              <h3 className="text-lg font-semibold text-gray-800">
+                {item.title}
+              </h3>
+              <p className="text-sm text-gray-600">{item.para}</p>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
 
       {/* Discover The Neighborhoods */}
       <div className="flex flex-col gap-8 justify-center items-center w-[80%]">
