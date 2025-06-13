@@ -18,18 +18,15 @@ import {
   FaSmile,
   FaHome,
 } from "react-icons/fa";
-
-// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import NeighborHoodsPCard from "../components/Cards/NeighborHoodsPCard";
-4;
-// import { ArrowLeft, ArrowRight } from "lucide-react";
 
-// Animation Variants
+import { MapPin, ArrowRightCircle } from "lucide-react";
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   animate: { opacity: 1, y: 0 },
 };
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import PropertyCard from "../components/Cards/PropertyCard";
 function HeroSection2() {
   const featuredProperties = [
     {
@@ -707,94 +704,158 @@ function HeroSection2() {
       </motion.div>
 
       {/* Discover The Neighborhoods */}
-      <div className="flex flex-col gap-8 justify-center items-center w-[80%]">
-        <div className="w-[100%] flex flex-col md:flex-row justify-between items-center">
-          <h1 className="text-xl md:text-3xl font-bold font-mono">
-            Discover The Neighborhoods.
-          </h1>
-          <p className="px-8 font-semibold rounded-full bg-blue-300">
-            Find More.
-          </p>
-        </div>
+      <motion.section
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        transition={{ staggerChildren: 0.1 }}
+        className="w-[90%] max-w-6xl mx-auto py-10 flex flex-col gap-12 items-center"
+      >
+        {/* Header Section */}
+        <motion.div
+          variants={fadeInUp}
+          className="w-full flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left"
+        >
+          <div className="flex items-center gap-3">
+            <MapPin className="text-[#08b581]" size={32} />
+            <h1 className="text-3xl md:text-4xl font-extrabold text-gray-800">
+              Discover the Neighborhoods
+            </h1>
+          </div>
 
-        <div className="flex flex-col md:flex-row flex-wrap gap-3">
+          <motion.p
+            className="bg-blue-300 px-6 py-2 text-sm md:text-base rounded-full font-semibold hover:bg-blue-400 transition"
+            whileHover={{ scale: 1.05 }}
+          >
+            Find More
+          </motion.p>
+        </motion.div>
+
+        {/* Description */}
+        <motion.p
+          variants={fadeInUp}
+          transition={{ duration: 0.5 }}
+          className="text-center text-gray-600 max-w-3xl text-sm md:text-base leading-relaxed"
+        >
+          Explore the most vibrant and peaceful neighborhoods around you.
+          Whether you're seeking urban energy or suburban calm, our property
+          listings in diverse neighborhoods provide the best options tailored to
+          your lifestyle.
+        </motion.p>
+
+        {/* Cards Section */}
+        <motion.div
+          variants={fadeInUp}
+          className="w-full flex flex-wrap justify-center md:justify-between gap-6"
+        >
           {neighborHoodsProperties &&
-            neighborHoodsProperties.map((data, idx) => {
-              return (
-                <NeighborHoodsPCard data={data} key={idx}></NeighborHoodsPCard>
-              );
-            })}
-        </div>
+            neighborHoodsProperties.map((data, idx) => (
+              <motion.div
+                key={idx}
+                variants={fadeInUp}
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.3 }}
+              >
+                <NeighborHoodsPCard data={data} />
+              </motion.div>
+            ))}
+        </motion.div>
 
-        <div>
-          <button className="px-8 py-2 rounded-full bg-[#08b581] text-white font-bold">
-            Explore More
-          </button>
-        </div>
-      </div>
+        {/* Explore More Button */}
+        <motion.button
+          variants={fadeInUp}
+          whileHover={{ scale: 1.1 }}
+          className="flex items-center gap-2 px-8 py-3 rounded-full bg-[#08b581] text-white font-bold shadow-lg hover:bg-[#06a06a] transition"
+        >
+          Explore More <ArrowRightCircle size={20} />
+        </motion.button>
+      </motion.section>
 
       {/* Our New Listed Properties */}
-      <div className="flex flex-col gap-8 justify-center items-center w-[80%]">
-        <div className="flex justify-between items-center w-[100%] flex-wrap">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-4 px-4 py-6">
-            <h1 className="text-xl md:text-2xl font-bold text-gray-800">
-              New Properties
-            </h1>
+      <motion.div
+        initial="initial"
+        whileInView="animate"
+        variants={fadeInUp}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="flex flex-col gap-12 justify-center items-center w-full px-4 md:px-10 py-12"
+      >
+        {/* Header Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center w-full gap-6">
+          <div className="flex flex-col gap-2 max-w-xl text-center md:text-left">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl md:text-4xl font-extrabold text-gray-900"
+            >
+              Discover the Latest Listings
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="text-gray-600 text-sm md:text-base"
+            >
+              Explore hand-picked properties recently added to our platform.
+              Whether you're searching for farmland, apartments, or commercial
+              space — we've got you covered!
+            </motion.p>
+          </div>
 
-            <div className="flex flex-wrap justify-center md:justify-between items-center gap-3">
-              {filters.map((filter, idx) => (
-                <motion.button
-                  key={idx}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setActiveFilter(filter)}
-                  className={`px-4 py-2 cursor-pointer rounded-full border text-sm font-medium transition-all duration-300
+          {/* Filters */}
+          <div className="flex flex-wrap justify-center items-center gap-3">
+            {filters.map((filter, idx) => (
+              <motion.button
+                key={idx}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setActiveFilter(filter)}
+                className={`px-4 py-2 rounded-full border text-sm font-medium transition-all duration-300
               ${
                 activeFilter === filter
-                  ? " text-black border-blue-600"
+                  ? "bg-blue-600 text-white border-blue-600"
                   : "bg-white text-gray-800 border-gray-300 hover:bg-gray-100"
               }`}
-                >
-                  {filter}
-                </motion.button>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex justify-center items-center gap-3">
-            <button className="px-6 py-1 cursor-pointer hidden border-1 border-black">
-              Left
-            </button>
-            <button className="px-6 py-1 cursor-pointer hidden border-1 border-black">
-              Right
-            </button>
+              >
+                {filter}
+              </motion.button>
+            ))}
           </div>
         </div>
 
-        <div className="flex justify-center items-center flex-wrap w-[100%] gap-6">
+        {/* Properties Grid */}
+        <motion.div
+          initial="initial"
+          whileInView="animate"
+          variants={fadeInUp}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 w-full"
+        >
           {newPropertiesData &&
-            newPropertiesData.map((data, idx) => {
-              return (
-                <FeaturedPCard
-                  data={data}
-                  layout={{
-                    pxX: "6",
-                    pxY: "1",
-                    textSize: "md",
-                    gapNum: "3",
-                  }}
-                  key={idx}
-                ></FeaturedPCard>
-              );
-            })}
-        </div>
+            newPropertiesData.map((data, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.3 }}
+              >
+                <PropertyCard data={data} />
+              </motion.div>
+            ))}
+        </motion.div>
 
-        <div>
-          <button className="px-8 py-2 rounded-full bg-[#08b581] text-white font-bold">
+        {/* Explore More Button */}
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <button className="px-8 py-2 rounded-full bg-[#08b581] text-white font-semibold shadow-md hover:shadow-lg hover:bg-[#07a074] transition-all duration-300">
             Explore More
           </button>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
