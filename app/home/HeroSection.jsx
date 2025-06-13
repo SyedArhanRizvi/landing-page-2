@@ -8,7 +8,7 @@ function HeroSection() {
 
   return (
     <section
-      className="w-screen min-h-screen flex items-center px-4 md:px-10"
+      className="w-full min-h-screen flex items-center px-4 md:px-10"
       style={{
         backgroundImage: 'url("/lndBg1.jpg")',
         backgroundPosition: "center",

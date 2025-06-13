@@ -7,7 +7,7 @@ import HeroSection4 from './home/HeroSection4';
 
 function page() {
   return (
-    <main className='overflow-x-hidden'>
+    <main className='overflow-hidden'>
         <HeroSection></HeroSection>
         <HeroSection2></HeroSection2>
         <HeroSection3></HeroSection3>

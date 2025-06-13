@@ -3,7 +3,6 @@ import React, { useRef, useState } from "react";
 import FeaturedPCard from "../components/Cards/FeaturedPCard";
 import { motion } from "framer-motion";
 import {
-  FaHome,
   FaBuilding,
   FaHotel,
   FaRegBuilding,
@@ -12,8 +11,19 @@ import {
   FaTractor,
 } from "react-icons/fa";
 
+import {
+  FaPhoneAlt,
+  FaInfoCircle,
+  FaHandshake,
+  FaSmile,
+  FaHome,
+} from "react-icons/fa";
+
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import NeighborHoodsPCard from "../components/Cards/NeighborHoodsPCard";
+4;
+
+import { ArrowLeft, ArrowRight } from "lucide-react";
 function HeroSection2() {
   const featuredProperties = [
     {
@@ -451,102 +461,183 @@ function HeroSection2() {
   };
 
   return (
-    <section className="w-screen rounded-t-4xl flex flex-col justify-center gap-10 md:gap-20 p-10 items-center bg-white -mt-8">
+    <section className="w-full rounded-t-4xl flex flex-col justify-center gap-10 md:gap-20 p-10 items-center bg-white -mt-8">
       {/* About Us Basics Info Container*/}
-      <div className="flex flex-col md:flex-row justify-between border-b-1 border-[#a99696ae] pb-4 w-[80%]">
-        <div className="w-[33%] flex flex-col justify-between gap-2">
-          <h1 className="text-2xl font-black font-serif">
-            Our mission is to redefine real estate in the costumer favor.
-          </h1>
-          <div className="flex gap-3">
-            <button className="px-6 py-2 border-1 border-black rounded-md cursor-pointer bg-black text-white delay-200 transition-all hover:bg-white hover:text-black">
-              Call Now
-            </button>
-            <button className="px-6 py-2 border-1 bg-white text-black delay-200 hover:bg-black hover:text-white border-black rounded-md cursor-pointer">
-              About Us
-            </button>
+      <div className="space-y-12 py-8 px-4 md:px-16">
+        {/* Mission Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col md:flex-row justify-between border-b border-[#a99696ae] pb-6 w-full gap-6"
+        >
+          {/* Mission & Buttons */}
+          <div className="w-full md:w-[33%] flex flex-col justify-between gap-4">
+            <h1 className="text-2xl font-black font-serif text-gray-800">
+              Our mission is to redefine real estate in the customer's favor.
+            </h1>
+            <div className="flex gap-4">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center gap-2 px-6 py-2 border border-black rounded-md cursor-pointer bg-black text-white transition-all"
+              >
+                <FaPhoneAlt />
+                Call Now
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="flex items-center gap-2 px-6 py-2 border border-black bg-white text-black hover:bg-black hover:text-white rounded-md cursor-pointer transition-all"
+              >
+                <FaInfoCircle />
+                About Us
+              </motion.button>
+            </div>
           </div>
-        </div>
-        <div className="w-[33%] flex flex-col gap-3 text-gray-600">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            nostrum aperiam nesciunt.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio soluta
-            at beatae, nostrum voluptates rerum nisi qui earum sunt quis libero
-            dolores possimus reiciendis enim sequi sit numquam fugiat iusto?
-          </p>
-        </div>
-        <div className="flex flex-col gap-2">
-          <p className="text-gray-800 font-light">Trusted Partners</p>
-          <h1 className="text-2xl font-bold font-serif">
-            <strong>rightmoove</strong>
-          </h1>
-          <h1 className="font-serif text-xl">airbnb</h1>
-          <p className="font-serif text-xl">Brandname</p>
-          <p className="font-serif text-xl">Decorilla</p>
-        </div>
-      </div>
 
-      {/* About Our Connections And Happy Families And Complete Real State Projects Count Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center w-[80%]">
-        <div className="flex md:w-[33%] flex-col md:flex-row justify-center items-center gap-4">
-          <h1 className="text-xl md:text-5xl font-serif">1000+</h1>
-          <p className="text-gray-600 font-serif text-xl">
-            Properties Sell Every Year
-          </p>
-        </div>
-        <div className="flex md:w-[33%] flex-col md:flex-row justify-center items-center gap-4">
-          <h1 className="text-xl md:text-5xl font-serif">50K+</h1>
-          <p className="text-gray-600 font-serif text-xl">Happy Clients</p>
-        </div>
-        <div className="flex md:w-[33%] flex-col md:flex-row justify-center items-center gap-4">
-          <h1 className="text-xl md:text-5xl font-serif">650+</h1>
-          <p className="text-gray-600 font-serif text-xl">
-            Residential & Commercial Projects Completed.
-          </p>
+          {/* Description Texts */}
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="w-full md:w-[33%] flex flex-col gap-4 text-gray-600"
+          >
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Distinctio nostrum aperiam nesciunt.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio
+              soluta at beatae, nostrum voluptates rerum nisi qui earum sunt
+              quis libero dolores possimus reiciendis enim sequi sit numquam
+              fugiat iusto?
+            </p>
+          </motion.div>
+
+          {/* Partner Logos */}
+          <motion.div
+            initial={{ opacity: 0, x: 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="w-full md:w-[33%] flex flex-col gap-3"
+          >
+            <p className="text-gray-800 font-light">Trusted Partners</p>
+            <h1 className="text-2xl font-bold font-serif">
+              <strong>rightmoove</strong>
+            </h1>
+            <h1 className="font-serif text-xl">airbnb</h1>
+            <p className="font-serif text-xl">Brandname</p>
+            <p className="font-serif text-xl">Decorilla</p>
+          </motion.div>
+        </motion.div>
+
+        {/* Stats Section */}
+        <div className="flex flex-col md:flex-row justify-between items-center w-full gap-8">
+          <motion.div
+            whileInView={{ scale: 1, opacity: 1 }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col md:flex-row items-center gap-3 md:w-[33%]"
+          >
+            <FaHome className="text-3xl text-green-600" />
+            <div>
+              <h1 className="text-2xl md:text-5xl font-serif">1000+</h1>
+              <p className="text-gray-600 font-serif text-xl">
+                Properties Sell Every Year
+              </p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            whileInView={{ scale: 1, opacity: 1 }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="flex flex-col md:flex-row items-center gap-3 md:w-[33%]"
+          >
+            <FaSmile className="text-3xl text-yellow-500" />
+            <div>
+              <h1 className="text-2xl md:text-5xl font-serif">50K+</h1>
+              <p className="text-gray-600 font-serif text-xl">Happy Clients</p>
+            </div>
+          </motion.div>
+
+          <motion.div
+            whileInView={{ scale: 1, opacity: 1 }}
+            initial={{ scale: 0.8, opacity: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="flex flex-col md:flex-row items-center gap-3 md:w-[33%]"
+          >
+            <FaHandshake className="text-3xl text-blue-500" />
+            <div>
+              <h1 className="text-2xl md:text-5xl font-serif">650+</h1>
+              <p className="text-gray-600 font-serif text-xl">
+                Residential & Commercial Projects Completed.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </div>
 
       {/* Featured Property For Sell Container */}
-      <div className="flex flex-col gap-3 justify-center items-center w-[80%]">
-        <div className="flex justify-between items-center w-[100%] flex-wrap">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6">
-            <h1 className="text-xl md:text-3xl font-bold font-mono">
+      <motion.div
+        className="flex flex-col gap-6 justify-center items-center w-full max-w-6xl mx-auto px-4"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        {/* Header */}
+        <div className="flex flex-wrap justify-between items-center w-full gap-4">
+          {/* Title + Tag */}
+          <motion.div
+            className="flex flex-col sm:flex-row justify-center items-center gap-4"
+            initial={{ x: -30, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <h1 className="text-2xl sm:text-3xl font-bold font-mono">
               Featured Properties.
             </h1>
-            <p className="px-8 font-semibold rounded-full bg-blue-300">
+            <p className="px-4 py-1 text-sm bg-blue-300 rounded-full font-semibold">
               See More..
             </p>
-          </div>
-          <div className="flex justify-center items-center gap-3">
-            <button className="px-6 py-1 cursor-pointer border-1 border-black">
-              Left
+          </motion.div>
+
+          {/* Arrows */}
+          <motion.div
+            className="flex items-center gap-3"
+            initial={{ x: 30, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+          >
+            <button className="p-2 rounded-full hover:bg-gray-100 transition">
+              <ArrowLeft size={20} />
             </button>
-            <button className="px-6 py-1 cursor-pointer border-1 border-black">
-              Right
+            <button className="p-2 rounded-full hover:bg-gray-100 transition">
+              <ArrowRight size={20} />
             </button>
-          </div>
+          </motion.div>
         </div>
 
-        {/* Cards Container */}
-        <div className="flex overflow-x-auto gap-6 p-5 ">
-          {featuredProperties &&
-            featuredProperties.map((data, idx) => (
-              <FeaturedPCard
-                data={data}
-                key={idx}
-                layout={{
-                  pxX: "6",
-                  pxY: "1",
-                  textSize: "md",
-                  gapNum: "3",
-                }}
-              />
-            ))}
-        </div>
-      </div>
+        {/* Cards */}
+        <motion.div
+          className="flex overflow-hidden gap-6 p-2 scrollbar-thin scrollbar-thumb-gray-400" 
+          // scrollbar-thin scrollbar-thumb-gray-400
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          {featuredProperties?.map((data, idx) => (
+            <motion.div
+              key={idx}
+              // whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
+              <FeaturedPCard data={data} />
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
 
       {/* Our Property Types Container */}
       <div className="flex flex-col gap-3 justify-center items-center w-[80%]">

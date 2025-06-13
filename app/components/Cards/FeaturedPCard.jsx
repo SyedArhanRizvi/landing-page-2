@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-function FeaturedPCard({ data, layout }) {
+function FeaturedPCard({ data }) {
   const {
     imgs,
     title,
@@ -16,7 +16,6 @@ function FeaturedPCard({ data, layout }) {
     currencyType,
   } = data;
   const { area, city, pLocation } = address;
-  const { pxX, pyY, textSize, gapNum } = layout;
 
   const [imgIdx, setImgIdx] = useState(0);
 
@@ -41,16 +40,16 @@ function FeaturedPCard({ data, layout }) {
         <span className="bg-yellow-400 text-black text-xs font-semibold py-1 px-3 rounded-md shadow animate-pulse">
           Featured
         </span>
-        <div className={`flex items-center gap-${gapNum}`}>
+        <div className="flex items-center gap-3">
           <button
             onClick={() => imageCarousel("Left")}
-            className={`p-${pyY} text-${textSize} bg-white/80 cursor-pointer backdrop-blur-md rounded-full shadow hover:scale-110 transition`}
+            className="p-2 text-md bg-white/80 cursor-pointer backdrop-blur-md rounded-full shadow hover:scale-110 transition"
           >
             <FaArrowLeft />
           </button>
           <button
             onClick={() => imageCarousel("Right")}
-            className={`p-${pyY} text-${textSize} bg-white/80 cursor-pointer backdrop-blur-md rounded-full shadow hover:scale-110 transition`}
+            className="p-2 text-md bg-white/80 cursor-pointer backdrop-blur-md rounded-full shadow hover:scale-110 transition"
           >
             <FaArrowRight />
           </button>
@@ -71,7 +70,7 @@ function FeaturedPCard({ data, layout }) {
       </div>
 
       {/* Text Content */}
-      <div className={`px-${pxX} py-3 flex flex-col gap-2`}>
+      <div className="px-4 py-3 flex flex-col gap-2">
         <h2 className="text-lg font-bold text-gray-800">{title}</h2>
         <p className="text-sm text-gray-600 line-clamp-2">{para}</p>
 
@@ -80,16 +79,28 @@ function FeaturedPCard({ data, layout }) {
           <span>{currencyType}</span>
         </div>
 
-        <div className="flex justify-between text-sm text-gray-500 mt-1">
-          <span>{area}</span>
-          <span>{city}</span>
-          <span>{pLocation}</span>
+        {/* Address Details as Stylish Tags */}
+        <div className="flex flex-wrap gap-2 mt-2">
+          {[area, city, pLocation].map((item, idx) => (
+            <span
+              key={idx}
+              className="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded-full border border-gray-300"
+            >
+              {item}
+            </span>
+          ))}
         </div>
 
-        <div className="flex justify-between text-sm text-gray-500 mt-1">
-          <span>{typ}</span>
-          <span>{bhk}</span>
-          <span>{size} sqft</span>
+        {/* Property Info as Stylish Tags */}
+        <div className="flex flex-wrap gap-2 mt-2">
+          {[typ, bhk, `${size} sqft`].map((item, idx) => (
+            <span
+              key={idx}
+              className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full border border-blue-200"
+            >
+              {item}
+            </span>
+          ))}
         </div>
       </div>
     </motion.div>

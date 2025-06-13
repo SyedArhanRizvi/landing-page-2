@@ -5,10 +5,10 @@ body {
   overflow-x: hidden;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
 }
 
 .your-container-class::-webkit-scrollbar {
   display: none;
-}
+} */

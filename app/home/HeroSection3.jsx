@@ -42,7 +42,6 @@ function HeroSection3() {
       style={{
         backgroundImage: 'url("/landPBG2.avif")',
         backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
