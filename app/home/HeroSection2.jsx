@@ -61,186 +61,186 @@ function HeroSection2() {
       bhk: "2BHK",
       size: "1050 sq.ft",
     },
-    {
-      imgs: ["/ap1.jpeg", "/ap2.jpg"],
-      title: "Studio Apartment for Rent in Mumbai",
-      para: "Furnished apartment ideal for working professionals.",
-      price: "35,000",
-      currencyType: "INR/month",
-      address: {
-        area: "Andheri West",
-        city: "Mumbai",
-        pLocation: "Near Lokhandwala Market",
-      },
-      typ: "Studio",
-      bhk: "1RK",
-      size: "500 sq.ft",
-    },
-    {
-      imgs: ["/ap1.jpeg", "/ap2.jpg"],
-      title: "Independent House for Sale in Lucknow",
-      para: "Corner plot with ample space for future construction.",
-      price: "75,00,000",
-      currencyType: "INR",
-      address: {
-        area: "Gomti Nagar",
-        city: "Lucknow",
-        pLocation: "Near City Mall",
-      },
-      typ: "House",
-      bhk: "3BHK",
-      size: "1600 sq.ft",
-    },
-    {
-      imgs: ["/ap1.jpeg", "/ap2.jpg"],
-      title: "Modern Apartment in Bangalore",
-      para: "Close to Manyata Tech Park. Family-friendly society.",
-      price: "1,15,00,000",
-      currencyType: "INR",
-      address: {
-        area: "Hebbal",
-        city: "Bangalore",
-        pLocation: "Near Nagawara Lake",
-      },
-      typ: "Apartment",
-      bhk: "3BHK",
-      size: "2000 sq.ft",
-    },
-    {
-      imgs: ["/ap1.jpeg", "/ap2.jpg"],
-      title: "Budget 1BHK Flat in Ahmedabad",
-      para: "Good rental property with all basic amenities.",
-      price: "22,00,000",
-      currencyType: "INR",
-      address: {
-        area: "Maninagar",
-        city: "Ahmedabad",
-        pLocation: "Opp. Kankaria Lake",
-      },
-      typ: "Flat",
-      bhk: "1BHK",
-      size: "600 sq.ft",
-    },
-    {
-      imgs: ["/ap1.jpeg", "/ap2.jpg"],
-      title: "Spacious 5BHK Bungalow in Jaipur",
-      para: "Heritage-style bungalow in posh colony.",
-      price: "2,75,00,000",
-      currencyType: "INR",
-      address: {
-        area: "Malviya Nagar",
-        city: "Jaipur",
-        pLocation: "Near GT Mall",
-      },
-      typ: "Bungalow",
-      bhk: "5BHK",
-      size: "3800 sq.ft",
-    },
-    {
-      imgs: ["/ap1.jpeg", "/ap2.jpg"],
-      title: "Commercial Property for Rent in Gurugram",
-      para: "Perfect for startups. Furnished with 50 seats.",
-      price: "1,25,000",
-      currencyType: "INR/month",
-      address: {
-        area: "Cyber City",
-        city: "Gurugram",
-        pLocation: "DLF Phase 3",
-      },
-      typ: "Office",
-      bhk: "NA",
-      size: "2100 sq.ft",
-    },
-    {
-      imgs: ["/ap1.jpeg", "/ap2.jpg"],
-      title: "Premium Row House in Hyderabad",
-      para: "Gated community with club, gym, and pool.",
-      price: "1,35,00,000",
-      currencyType: "INR",
-      address: {
-        area: "Kondapur",
-        city: "Hyderabad",
-        pLocation: "Near Botanical Garden",
-      },
-      typ: "Row House",
-      bhk: "4BHK",
-      size: "2500 sq.ft",
-    },
-    {
-      imgs: ["/ap1.jpeg", "/ap2.jpg"],
-      title: "Residential Land for Sale in Patna",
-      para: "Prime land in developing area, near AIIMS.",
-      price: "48,00,000",
-      currencyType: "INR",
-      address: {
-        area: "Phulwari",
-        city: "Patna",
-        pLocation: "Near AIIMS Hospital",
-      },
-      typ: "Land",
-      bhk: "NA",
-      size: "2400 sq.ft",
-    },
-    {
-      imgs: ["/ap1.jpeg", "/ap2.jpg"],
-      title: "Girls PG with Meals in Chandigarh",
-      para: "Safe and fully furnished with 3 meals daily.",
-      price: "12,000",
-      currencyType: "INR/month",
-      address: {
-        area: "Sector 22",
-        city: "Chandigarh",
-        pLocation: "Near Bus Stand",
-      },
-      typ: "PG",
-      bhk: "1 Sharing/2 Sharing",
-      size: "400 sq.ft",
-    },
-    {
-      imgs: ["/ap1.jpeg", "/ap2.jpg"],
-      title: "Farmhouse in Dehradun Foothills",
-      para: "Weekend getaway with scenic views and natural air.",
-      price: "1,50,00,000",
-      currencyType: "INR",
-      address: {
-        area: "Mussoorie Road",
-        city: "Dehradun",
-        pLocation: "Near Sahastradhara",
-      },
-      typ: "Farmhouse",
-      bhk: "3BHK",
-      size: "3000 sq.ft",
-    },
-    {
-      imgs: ["/ap1.jpeg", "/ap2.jpg"],
-      title: "Luxury Penthouse in Navi Mumbai",
-      para: "Top floor, sea-facing with private terrace garden.",
-      price: "2,90,00,000",
-      currencyType: "INR",
-      address: {
-        area: "Vashi",
-        city: "Navi Mumbai",
-        pLocation: "Palm Beach Road",
-      },
-      typ: "Penthouse",
-      bhk: "4BHK",
-      size: "3500 sq.ft",
-    },
-    {
-      imgs: ["/ap1.jpeg", "/ap2.jpg"],
-      title: "Modern Duplex in Bhopal",
-      para: "Double-storey with modular kitchen and solar panel setup.",
-      price: "68,00,000",
-      currencyType: "INR",
-      address: {
-        area: "Kolar Road",
-        city: "Bhopal",
-        pLocation: "Near Aura Mall",
-      },
-      typ: "Duplex",
-      bhk: "3BHK",
-      size: "1900 sq.ft",
-    },
+    // {
+    //   imgs: ["/ap1.jpeg", "/ap2.jpg"],
+    //   title: "Studio Apartment for Rent in Mumbai",
+    //   para: "Furnished apartment ideal for working professionals.",
+    //   price: "35,000",
+    //   currencyType: "INR/month",
+    //   address: {
+    //     area: "Andheri West",
+    //     city: "Mumbai",
+    //     pLocation: "Near Lokhandwala Market",
+    //   },
+    //   typ: "Studio",
+    //   bhk: "1RK",
+    //   size: "500 sq.ft",
+    // },
+    // {
+    //   imgs: ["/ap1.jpeg", "/ap2.jpg"],
+    //   title: "Independent House for Sale in Lucknow",
+    //   para: "Corner plot with ample space for future construction.",
+    //   price: "75,00,000",
+    //   currencyType: "INR",
+    //   address: {
+    //     area: "Gomti Nagar",
+    //     city: "Lucknow",
+    //     pLocation: "Near City Mall",
+    //   },
+    //   typ: "House",
+    //   bhk: "3BHK",
+    //   size: "1600 sq.ft",
+    // },
+    // {
+    //   imgs: ["/ap1.jpeg", "/ap2.jpg"],
+    //   title: "Modern Apartment in Bangalore",
+    //   para: "Close to Manyata Tech Park. Family-friendly society.",
+    //   price: "1,15,00,000",
+    //   currencyType: "INR",
+    //   address: {
+    //     area: "Hebbal",
+    //     city: "Bangalore",
+    //     pLocation: "Near Nagawara Lake",
+    //   },
+    //   typ: "Apartment",
+    //   bhk: "3BHK",
+    //   size: "2000 sq.ft",
+    // },
+    // {
+    //   imgs: ["/ap1.jpeg", "/ap2.jpg"],
+    //   title: "Budget 1BHK Flat in Ahmedabad",
+    //   para: "Good rental property with all basic amenities.",
+    //   price: "22,00,000",
+    //   currencyType: "INR",
+    //   address: {
+    //     area: "Maninagar",
+    //     city: "Ahmedabad",
+    //     pLocation: "Opp. Kankaria Lake",
+    //   },
+    //   typ: "Flat",
+    //   bhk: "1BHK",
+    //   size: "600 sq.ft",
+    // },
+    // {
+    //   imgs: ["/ap1.jpeg", "/ap2.jpg"],
+    //   title: "Spacious 5BHK Bungalow in Jaipur",
+    //   para: "Heritage-style bungalow in posh colony.",
+    //   price: "2,75,00,000",
+    //   currencyType: "INR",
+    //   address: {
+    //     area: "Malviya Nagar",
+    //     city: "Jaipur",
+    //     pLocation: "Near GT Mall",
+    //   },
+    //   typ: "Bungalow",
+    //   bhk: "5BHK",
+    //   size: "3800 sq.ft",
+    // },
+    // {
+    //   imgs: ["/ap1.jpeg", "/ap2.jpg"],
+    //   title: "Commercial Property for Rent in Gurugram",
+    //   para: "Perfect for startups. Furnished with 50 seats.",
+    //   price: "1,25,000",
+    //   currencyType: "INR/month",
+    //   address: {
+    //     area: "Cyber City",
+    //     city: "Gurugram",
+    //     pLocation: "DLF Phase 3",
+    //   },
+    //   typ: "Office",
+    //   bhk: "NA",
+    //   size: "2100 sq.ft",
+    // },
+    // {
+    //   imgs: ["/ap1.jpeg", "/ap2.jpg"],
+    //   title: "Premium Row House in Hyderabad",
+    //   para: "Gated community with club, gym, and pool.",
+    //   price: "1,35,00,000",
+    //   currencyType: "INR",
+    //   address: {
+    //     area: "Kondapur",
+    //     city: "Hyderabad",
+    //     pLocation: "Near Botanical Garden",
+    //   },
+    //   typ: "Row House",
+    //   bhk: "4BHK",
+    //   size: "2500 sq.ft",
+    // },
+    // {
+    //   imgs: ["/ap1.jpeg", "/ap2.jpg"],
+    //   title: "Residential Land for Sale in Patna",
+    //   para: "Prime land in developing area, near AIIMS.",
+    //   price: "48,00,000",
+    //   currencyType: "INR",
+    //   address: {
+    //     area: "Phulwari",
+    //     city: "Patna",
+    //     pLocation: "Near AIIMS Hospital",
+    //   },
+    //   typ: "Land",
+    //   bhk: "NA",
+    //   size: "2400 sq.ft",
+    // },
+    // {
+    //   imgs: ["/ap1.jpeg", "/ap2.jpg"],
+    //   title: "Girls PG with Meals in Chandigarh",
+    //   para: "Safe and fully furnished with 3 meals daily.",
+    //   price: "12,000",
+    //   currencyType: "INR/month",
+    //   address: {
+    //     area: "Sector 22",
+    //     city: "Chandigarh",
+    //     pLocation: "Near Bus Stand",
+    //   },
+    //   typ: "PG",
+    //   bhk: "1 Sharing/2 Sharing",
+    //   size: "400 sq.ft",
+    // },
+    // {
+    //   imgs: ["/ap1.jpeg", "/ap2.jpg"],
+    //   title: "Farmhouse in Dehradun Foothills",
+    //   para: "Weekend getaway with scenic views and natural air.",
+    //   price: "1,50,00,000",
+    //   currencyType: "INR",
+    //   address: {
+    //     area: "Mussoorie Road",
+    //     city: "Dehradun",
+    //     pLocation: "Near Sahastradhara",
+    //   },
+    //   typ: "Farmhouse",
+    //   bhk: "3BHK",
+    //   size: "3000 sq.ft",
+    // },
+    // {
+    //   imgs: ["/ap1.jpeg", "/ap2.jpg"],
+    //   title: "Luxury Penthouse in Navi Mumbai",
+    //   para: "Top floor, sea-facing with private terrace garden.",
+    //   price: "2,90,00,000",
+    //   currencyType: "INR",
+    //   address: {
+    //     area: "Vashi",
+    //     city: "Navi Mumbai",
+    //     pLocation: "Palm Beach Road",
+    //   },
+    //   typ: "Penthouse",
+    //   bhk: "4BHK",
+    //   size: "3500 sq.ft",
+    // },
+    // {
+    //   imgs: ["/ap1.jpeg", "/ap2.jpg"],
+    //   title: "Modern Duplex in Bhopal",
+    //   para: "Double-storey with modular kitchen and solar panel setup.",
+    //   price: "68,00,000",
+    //   currencyType: "INR",
+    //   address: {
+    //     area: "Kolar Road",
+    //     city: "Bhopal",
+    //     pLocation: "Near Aura Mall",
+    //   },
+    //   typ: "Duplex",
+    //   bhk: "3BHK",
+    //   size: "1900 sq.ft",
+    // },
   ];
 
   const ourPropertiesTypes = [
@@ -438,7 +438,7 @@ function HeroSection2() {
       size: "300 sq.ft",
     },
   ];
-const scrollRef = useRef(null);
+  const scrollRef = useRef(null);
 
   const scroll = (direction) => {
     const container = scrollRef.current;
@@ -449,8 +449,9 @@ const scrollRef = useRef(null);
       container.scrollLeft += scrollAmount;
     }
   };
+
   return (
-    <section className="w-screen rounded-t-4xl flex flex-col justify-center gap-10 md:gap-20 p-10 items-center bg-white min-h-screen -mt-8">
+    <section className="w-screen rounded-t-4xl flex flex-col justify-center gap-10 md:gap-20 p-10 items-center bg-white -mt-8">
       {/* About Us Basics Info Container*/}
       <div className="flex flex-col md:flex-row justify-between border-b-1 border-[#a99696ae] pb-4 w-[80%]">
         <div className="w-[33%] flex flex-col justify-between gap-2">
@@ -529,43 +530,22 @@ const scrollRef = useRef(null);
           </div>
         </div>
 
-       <div className="relative">
-      {/* Left Button */}
-      <button
-        onClick={() => scroll("left")}
-        className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:scale-105 transition"
-      >
-        <FaArrowLeft />
-      </button>
-
-      {/* Cards Container */}
-      <div
-        ref={scrollRef}
-        className="flex overflow-x-auto scroll-smooth gap-6 p-5 scrollbar-hide"
-      >
-        {featuredProperties &&
-          featuredProperties.map((data, idx) => (
-            <FeaturedPCard
-              data={data}
-              key={idx}
-              layout={{
-                pxX: "6",
-                pxY: "1",
-                textSize: "md",
-                gapNum: "3",
-              }}
-            />
-          ))}
-      </div>
-
-      {/* Right Button */}
-      <button
-        onClick={() => scroll("right")}
-        className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white p-2 rounded-full shadow hover:scale-105 transition"
-      >
-        <FaArrowRight />
-      </button>
-    </div>
+        {/* Cards Container */}
+        <div className="flex overflow-x-auto gap-6 p-5 ">
+          {featuredProperties &&
+            featuredProperties.map((data, idx) => (
+              <FeaturedPCard
+                data={data}
+                key={idx}
+                layout={{
+                  pxX: "6",
+                  pxY: "1",
+                  textSize: "md",
+                  gapNum: "3",
+                }}
+              />
+            ))}
+        </div>
       </div>
 
       {/* Our Property Types Container */}

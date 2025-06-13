@@ -44,7 +44,6 @@ function HeroSection3() {
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
-        minHeight: "500px",
       }}
     >
       <div className="w-[80%]">
